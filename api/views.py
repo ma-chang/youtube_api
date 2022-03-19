@@ -6,7 +6,7 @@ from .models import Video
 
 # Create your views here.
 class CreateUserView(generics.CreateAPIView):
-    serializers_class = UserSerializer
+    serializer_class = UserSerializer
     permission_classes = (AllowAny,)
 
 
