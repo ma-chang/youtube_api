@@ -7,7 +7,7 @@ from .models import User, Video
 
 
 class UserSerializer(serializers.ModelSerializer):
-    class Meta(self):
+    class Meta:
         model = get_user_model()
         fields = ("email", "password", "username", "id")
         extra_kwargs = {"password": {"write_only": True, "min_length": 5}}
@@ -19,6 +19,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class VideoSerializer(serializers.ModelSerializer):
-    class Meta(self):
+    class Meta:
         model = Video
         fields = ["id", "title", "video", "thumb", "like", "dislike"]

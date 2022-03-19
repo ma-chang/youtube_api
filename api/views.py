@@ -7,9 +7,9 @@ from .models import Video
 # Create your views here.
 class CreateUserView(generics.CreateAPIView):
     serializers_class = UserSerializer
-    permissions_classes = (AllowAny,)
+    permission_classes = (AllowAny,)
 
 
-class VideoViewSet(generics.ModelViewSet):
+class VideoViewSet(viewsets.ModelViewSet):
     queryset = Video.objects.all()
     serializers_class = VideoSerializer
