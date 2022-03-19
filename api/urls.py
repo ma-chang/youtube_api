@@ -7,5 +7,6 @@ router = routers.DefaultRouter()
 router.register("videos", VideoViewSet)
 
 urlpatterns = [
+    path("create/", CreateUserView.as_view(), name="create"),
     path("", include(router.urls)),
 ]

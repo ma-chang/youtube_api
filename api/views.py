@@ -12,4 +12,4 @@ class CreateUserView(generics.CreateAPIView):
 
 class VideoViewSet(viewsets.ModelViewSet):
     queryset = Video.objects.all()
-    serializers_class = VideoSerializer
+    serializer_class = VideoSerializer
