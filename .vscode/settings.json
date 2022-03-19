@@ -1,3 +1,6 @@
 {
-  "prettier.disableLanguages": ["markdown"]
+  "prettier.disableLanguages": [
+    "markdown"
+  ],
+  "python.formatting.provider": "black"
 }
