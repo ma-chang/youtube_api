@@ -13,7 +13,7 @@ def load_path_video(instance, filename):
 
 def load_path_thumb(instance, filename):
     ext = filename.split(".")[-1]
-    return "/".join(["thumb", str(instance.title) + str(".") + str(ext)])
+    return "/".join(["thumbnail", str(instance.title) + str(".") + str(ext)])
 
 
 # Create your models here.
@@ -57,7 +57,7 @@ class Video(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     title = models.CharField(max_length=30, blank=False)
     video = models.FileField(blank=False, upload_to=load_path_video)
-    thumb = models.ImageField(blank=False, upload_to=load_path_thumb)
+    thumbnail = models.ImageField(blank=False, upload_to=load_path_thumb)
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
 

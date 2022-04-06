@@ -21,4 +21,4 @@ class UserSerializer(serializers.ModelSerializer):
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
-        fields = ["id", "title", "video", "thumb", "like", "dislike"]
+        fields = ["id", "title", "video", "thumbnail", "like", "dislike"]
